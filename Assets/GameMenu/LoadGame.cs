@@ -1,0 +1,27 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+public class LoadGame : MonoBehaviour
+{
+    // Start is called before the first frame update
+    private float counter = 3.5f;
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        counter -= Time.deltaTime;
+        //Debug.Log(counter);
+        if (counter <= 0){
+            SceneManager.LoadScene("Game");
+        }
+    }
+    public void OnClick()
+    {
+         SceneManager.LoadScene("Game");
+    }
+}
